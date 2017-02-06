@@ -5,8 +5,11 @@
   "author": "{{ author }}",
   "private": true,
   "scripts": {
+    "start": "better-npm-run start",
     "dev": "node build/dev-server.js",
-    "build": "node build/build.js",
+    "build:qas": "better-npm-run build:qas",
+    "build": "better-npm-run build:prod",
+    "build:prod": "better-npm-run build:prod",
     {{#unit}}
     "unit": "karma start test/unit/karma.conf.js --single-run",
     {{/unit}}
@@ -17,8 +20,11 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"{{/lint}}
   },
   "dependencies": {
-    "vue": "^1.0.21",
-    "babel-runtime": "^6.0.0"
+    "axios": "^0.15.3",
+    "vue": "^2.1.10",
+    "babel-runtime": "^6.0.0",
+    "vue-router": "^2.2.0",
+    "vuex": "^2.1.1"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
@@ -26,9 +32,11 @@
     "babel-plugin-transform-runtime": "^6.0.0",
     "babel-preset-es2015": "^6.0.0",
     "babel-preset-stage-2": "^6.0.0",
+    "better-npm-run": "0.0.14",
     "connect-history-api-fallback": "^1.1.0",
     "css-loader": "^0.23.0",
     {{#lint}}
+    "eruda": "^1.2.1",
     "eslint": "^2.10.2",
     "eslint-friendly-formatter": "^2.0.5",
     "eslint-loader": "^1.3.0",
@@ -80,8 +88,9 @@
     "url-loader": "^0.5.7",
     "vue-hot-reload-api": "^1.2.0",
     "vue-html-loader": "^1.0.0",
-    "vue-loader": "^8.3.0",
+    "vue-loader": "^10.3.0",
     "vue-style-loader": "^1.0.0",
+    "vue-template-compiler": "^2.1.10",
     "webpack": "^1.12.2",
     "webpack-dev-middleware": "^1.4.0",
     "webpack-hot-middleware": "^2.6.0",
