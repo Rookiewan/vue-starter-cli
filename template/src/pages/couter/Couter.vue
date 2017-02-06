@@ -1,7 +1,7 @@
 <template>
   <div class="couter-container">
     <p>
-      {{sum}}
+      \{{sum}}
     </p>
     <p>
       <button @click="onHandleIncrease">+1</button>
@@ -11,7 +11,7 @@
       <button @click="onHandleGetMovies">get douban coming soon movies</button>
     </p>
     <ul v-show="moveList.length > 0">
-      <li v-for="(movie, idx) in moveList" :key="idx">{{movie.name}}</li>
+      <li v-for="(movie, idx) in moveList" :key="idx">\{{movie.name}}</li>
     </ul>
   </div>
 </template>

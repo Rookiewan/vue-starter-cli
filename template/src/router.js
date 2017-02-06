@@ -32,7 +32,7 @@ const routes = [
 ]
 const router = new VueRouter({
   mode: 'history',
-  base: Config.constant,
+  base: Config.routerBase,
   routes
 })
 

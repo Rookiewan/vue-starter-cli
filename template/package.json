@@ -19,6 +19,21 @@
     "test": "{{#unit}}npm run unit{{/unit}}{{#unit}}{{#e2e}} && {{/e2e}}{{/unit}}{{#e2e}}npm run e2e{{/e2e}}"{{#lint}},
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"{{/lint}}
   },
+  "betterScripts": {
+    "start": "node build/dev-server.js",
+    "build:qas": {
+      "command": "node build/build.js",
+      "env": {
+        "NODE_ENV": "qas"
+      }
+    },
+    "build:prod": {
+      "command": "node build/build.js",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  },
   "dependencies": {
     "axios": "^0.15.3",
     "vue": "^2.1.10",
