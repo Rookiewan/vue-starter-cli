@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>{{ name }}</title>
+    <script>
+      ! function(a) {var j, b = a.document, c = b.documentElement, d = a.orientation || 0, e = 750, f = 9 / 16, g = 100, h = a.devicePixelRatio, i = 1; b.write('<meta name="viewport" content="initial-scale=' + i + ",maximum-scale=" + i + ",minimum-scale=" + i + ',user-scalable=0">'), j = c.getBoundingClientRect().width, 90 == Math.abs(d) && (j *= f), c.style.fontSize = j / h * g / (e / h) + "px"}(window);
+    </script>
   </head>
   <body>
     <div id="app"></div>
